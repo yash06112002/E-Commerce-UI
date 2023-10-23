@@ -15,7 +15,10 @@ const Trends = ({
       <div className="trend">
         {trendingData.map((product) => (
           <div className="product" key={product.id}>
-            <img className="img" src="src\assets\1.jpg" />
+            <img
+              className="img"
+              src="https://images.unsplash.com/photo-1697660116747-1d0cf61a0c2e?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDEwfFM0TUtMQXNCQjc0fHxlbnwwfHx8fHw%3D"
+            />
             <Link
               className="link"
               to={"/products?category=" + product.category}
