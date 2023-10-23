@@ -21,7 +21,11 @@ const Product = ({ item }: { item: Product }) => {
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <img src="src\assets\1.jpg" height={150} width={150} />
+      <img
+        src="https://images.unsplash.com/photo-1697660116747-1d0cf61a0c2e?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDEwfFM0TUtMQXNCQjc0fHxlbnwwfHx8fHw%3D"
+        height={200}
+        width={150}
+      />
 
       <p>{item.title}</p>
       <div className="info">
