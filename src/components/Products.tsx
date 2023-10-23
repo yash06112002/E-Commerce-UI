@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { categories, data } from "../data";
 import Product from "./Product";
 import "../styles/Products.scss";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 const Products = () => {
   const searchParams = new URLSearchParams(window.location.search);
