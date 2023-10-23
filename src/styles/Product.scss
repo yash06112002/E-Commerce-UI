@@ -1,15 +1,47 @@
-// style={{
-//         height: "300px",
-//         width: "150px",
-//         gap: "10px",
-//         padding: "10px",
-//         position: "relative",
-//       }}
-
 .card {
   height: 300px;
   width: 150px;
   gap: 10px;
   padding: 10px;
   position: relative;
+
+  .info {
+    display: flex;
+    align-items: center;
+    height: 25px;
+    gap: 5px;
+    justify-content: space-around;
+
+    .oldPrice {
+      text-decoration: line-through;
+      color: grey;
+    }
+    .price {
+      color: rgb(0, 174, 255);
+    }
+    .wishlistOff {
+      border: none;
+      background-color: white;
+    }
+    .wishlistOn {
+      color: red;
+      font-size: 24px;
+      border: none;
+      background-color: white;
+    }
+
+    .viewButton {
+      position: absolute;
+      margin-top: 20px;
+      bottom: 160px;
+      background-color: rgb(0, 0, 255, 0.5);
+      color: white;
+      height: 30px;
+      line-height: 30px;
+      width: 150px;
+      text-align: center;
+      justify-content: center;
+      border: none;
+    }
+  }
 }

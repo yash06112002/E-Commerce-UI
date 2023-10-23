@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Product } from "../data";
+import "../styles/Product.scss";
 
 const Product = ({ item }: { item: Product }) => {
   const [wishlistChoice, setWishlistChoice] = useState(false);
@@ -16,73 +17,43 @@ const Product = ({ item }: { item: Product }) => {
   };
   return (
     <div
-      style={{
-        height: "270px",
-        width: "150px",
-        gap: "10px",
-        padding: "10px",
-        position: "relative",
-      }}
+      className="card"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
       <img src="src\assets\1.jpg" height={150} width={150} />
 
       <p>{item.title}</p>
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          height: "25px",
-          // gap: "5px",
-          justifyContent: "space-around",
-        }}
-      >
-        {/* <p style={{ textDecoration: "line-through", color: "grey" }}>
+      <div className="info">
+        <p
+          className="oldPrice"
+          style={{ textDecoration: "line-through", color: "grey" }}
+        >
           Rs. {Number(item.price) - 100 > 0 ? Number(item.price) - 100 : 50}
-        </p> */}
-        <p>Rs. {Number(item.price)}</p>
+        </p>
+        <p className="price">Rs. {Number(item.price)}</p>
 
         {wishlistChoice && (
-          <p
-            style={{
-              color: "red",
-              fontSize: "24px",
-            }}
+          <button
+            className="wishlistOn"
             onClick={() => {
               toggleWishlistChoice();
             }}
           >
             ❤
-          </p>
+          </button>
         )}
         {!wishlistChoice && (
-          <p
+          <button
+            className="wishlistOff"
             onClick={() => {
               toggleWishlistChoice();
             }}
           >
             ❤
-          </p>
+          </button>
         )}
-        {isHover && (
-          <p
-            style={{
-              position: "absolute",
-              marginTop: "20px",
-              bottom: "5px",
-              backgroundColor: "rgb(0, 0, 255, 0.5)",
-              color: "white",
-              height: "30px",
-              lineHeight: "30px",
-              width: "150px",
-              textAlign: "center",
-              justifyContent: "center",
-            }}
-          >
-            View Product
-          </p>
-        )}
+        {isHover && <button className="viewButton">View Product</button>}
       </div>
     </div>
   );

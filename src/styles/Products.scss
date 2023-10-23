@@ -4,14 +4,17 @@ $font-stack: Helvetica, sans-serif;
   display: flex;
   padding: 15px;
   font-family: $font-stack;
-  flex-wrap: wrap;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .filters {
   display: flex;
   flex-direction: column;
-  background-color: aquamarine;
+  width: 30%;
+
+  .link {
+    text-decoration: none;
+    font-size: 20px;
+  }
 }
 
 .products {

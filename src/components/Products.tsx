@@ -30,14 +30,16 @@ const Products = () => {
   }, []);
 
   return (
-    <div className="results" style={{ display: "flex" }}>
+    <div className="results">
       <div className="filters">
         <h3>Search Results</h3>
         <div>
           <p className="heading">CATEGORIES</p>
           {categories.map((category) => (
             <div style={{ display: "flex" }} key={category}>
-              <a href={"/products?category=" + category}>{category}</a>
+              <a className="link" href={"/products?category=" + category}>
+                {category}
+              </a>
             </div>
           ))}
         </div>
@@ -45,16 +47,16 @@ const Products = () => {
           <p className="heading">PRICE RANGE</p>
 
           <div style={{ display: "flex" }}>
-            <a href={"/products?price=100"}>Less than 100</a>
-            {/* <p>{"0 to 100"}</p> */}
+            <a className="link" href={"/products?price=100"}>
+              Less than 100
+            </a>
           </div>
           <div style={{ display: "flex" }}>
-            <a href={"/products?price=200"}>Less than 200</a>
-            {/* <input type="checkbox" id="2" /> */}
-            {/* <p>{"100 to 200"}</p> */}
+            <a className="link" href={"/products?price=200"}>
+              Less than 200
+            </a>
           </div>
         </div>
-        <div></div>
       </div>
       <div className="products">
         {filteredProducts.map((item) => (
